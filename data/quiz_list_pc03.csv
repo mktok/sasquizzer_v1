@@ -1,0 +1,24 @@
+papercode,bookname,chapter,quizefile,displayfield
+PC03,IT,2022: CAG Standing Order on IT Audit,pc03_2022_auditit,2022: CAG Standing Order on IT Audit
+PC03,IT,2022: Digital India,pc03_2022_digtialind,2022: Digital India
+PC03,IT,2022: ERP2,pc03_2022_erp2,2022: ERP2
+PC03,IT,2022: Govt Websites Guidelines,pc03_2022_govtweb,2022: Govt Websites Guidelines
+PC03,IT,2022: IT Act 2011,pc03_2022_itact2011,2022: IT Act 2011
+PC03,IT,2022: IT Controls,pc03_2022_itcontrol,2022: IT Controls
+PC03,IT,2022: OWSAP,pc03_2022_owsap,2022: OWSAP
+PC04,IT,2022: PII,pc03_2022_pii,2022: PII
+PC03,IT Audit,IT Controls,pc03_itaud_itaudit,IT Audit: IT Controls
+PC03,IT Audit,General Controls,pc03_itaud_genctrl,IT Audit: General Controls
+PC03,IT Audit,Application Controls,pc03_itaud_appctrl,IT Audit: Application Controls
+PC03,IT Audit,SDLC,pc03_itaud_sdlc,IT Audit: SDLC
+PC03,IT,E-Governance,pc03_egovernance,E-Governance
+PC03,IT,NEGP,pc03_negp,NEGP
+PC03,IT,ERP,pc03_erp,ERP
+PC03,IT,Virus,pc03_virus,Virus
+PC03,IT,IT Act 2000,pc03_itact2000,IT Act 2000
+PC03,IT,Computer Basics,pc03_2022_basiscs,Computer Basics
+PC03,IT,DBMS 1,pc03_2022_dbms1,DBMS 1
+PC03,IT,DMBS 2,pc03_2022_dbms2,DMBS 2
+PC03,IT,Computer Networks,pc03_2022_networks,Computer Networks
+PC03,IT,OS 1,pc03_2022_os1,OS 1
+PC03,IT,OS 2,pc03_2022_os2,OS 2

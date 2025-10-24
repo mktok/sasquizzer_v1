@@ -1,0 +1,11 @@
+papercode,bookname,chapter,quizefile,displayfield
+PC22,CAG Audit Std,All,pc22_cag_audit_std,CAG Audit Std: All
+PC22,Compliance Audit,All,pc22_compliance_audit,Compliance Audit: All
+PC22,DPC Act,All,pc22_dpc,DPC Act: All
+PC22,Finance Attest Audit,All,pc22_fin_atst_audit,Finance Attest Audit: All
+PC22,Finance Attest Audit State,All,pc22_finance_audit_state,Finance Attest Audit State: All
+PC22,Fraud Corruption Audit,All,pc22_fraud_corruption,Fraud Corruption Audit: All
+PC22,MSO Audit,All,pc22_mso_audit,MSO Audit: All
+PC22,Performance Audit,All,pc22_performamce_audit,Performance Audit: All
+PC22,PPP Audit,All,pc22_ppp_audit,PPP Audit: All
+PC22,Reg. Audit Accts 2007,All,pc22_audit_acct_regln,Reg. Audit Accts 2007: All

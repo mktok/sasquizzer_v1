@@ -1,0 +1,67 @@
+papercode,bookname,chapter,quizefile,displayfield
+PC22,AQMF,All,pointers_pc22_aqmf_all,AQMF: All
+PC22,Compliance Audit,Ch-01,pointers_pc22_ca_ch01,Compliance Audit: Ch-01
+PC22,Compliance Audit,Ch-02,pointers_pc22_ca_ch02,Compliance Audit: Ch-02
+PC22,Compliance Audit,Ch-03,pointers_pc22_ca_ch03,Compliance Audit: Ch-03
+PC22,Compliance Audit,Ch-04,pointers_pc22_ca_ch04,Compliance Audit: Ch-04
+PC22,Compliance Audit,Ch-05,pointers_pc22_ca_ch05,Compliance Audit: Ch-05
+PC22,Compliance Audit,Ch-06,pointers_pc22_ca_ch06,Compliance Audit: Ch-06
+PC22,DPC Act,All,pointers_pc22_dpc1971_all,DPC Act: All
+PC22,Fin Attest Audit,Ch-01,pointers_pc22_faa_ch01,Fin Attest Audit: Ch-01
+PC22,Fin Attest Audit,Ch-02,pointers_pc22_faa_ch02,Fin Attest Audit: Ch-02
+PC22,Fin Attest Audit,Ch-03,pointers_pc22_faa_ch03,Fin Attest Audit: Ch-03
+PC22,Fin Attest Audit,Ch-04,pointers_pc22_faa_ch04,Fin Attest Audit: Ch-04
+PC22,Fin Attest Audit,Ch-05,pointers_pc22_faa_ch05,Fin Attest Audit: Ch-05
+PC22,Fin Attest Audit,Ch-06,pointers_pc22_faa_ch06,Fin Attest Audit: Ch-06
+PC22,Fin Attest Audit,Ch-07,pointers_pc22_faa_ch07,Fin Attest Audit: Ch-07
+PC22,Fin Attest Audit,Ch-08,pointers_pc22_faa_ch08,Fin Attest Audit: Ch-08
+PC22,Fraud & Corruption,All,pointers_pc22_fraud_all,Fraud & Corruption: All
+PC22,Internal Control,Appedix,pointers_pc22_ice_app,Internal Control: Appedix
+PC22,Internal Control,Ch-01,pointers_pc22_ice_ch01,Internal Control: Ch-01
+PC22,Internal Control,Ch-02,pointers_pc22_ice_ch02,Internal Control: Ch-02
+PC22,Internal Control,Ch-03,pointers_pc22_ice_ch03,Internal Control: Ch-03
+PC22,Internal Control,Ch-04,pointers_pc22_ice_ch04,Internal Control: Ch-04
+PC22,Internal Control,Ch-05,pointers_pc22_ice_ch05,Internal Control: Ch-05
+PC22,MSO Audit,Sect 3 Ch01,pointers_pc22_msosudit_s3ch01,MSO Audit: Sect 3 Ch01
+PC22,MSO Audit,Sect 3 Ch05,pointers_pc22_msosudit_s3ch05,MSO Audit: Sect 3 Ch05
+PC22,MSO Audit,Sect 3 Ch11,pointers_pc22_msosudit_s3ch11,MSO Audit: Sect 3 Ch11
+PC22,MSO Audit,Sect 3 Ch13,pointers_pc22_msosudit_s3ch13,MSO Audit: Sect 3 Ch13
+PC22,MSO Audit,Sect 3 Ch14,pointers_pc22_msosudit_s3ch14,MSO Audit: Sect 3 Ch14
+PC22,MSO Audit,Sect 3 Ch15,pointers_pc22_msosudit_s3ch15,MSO Audit: Sect 3 Ch15
+PC22,MSO Audit,Sect 3 Ch16,pointers_pc22_msosudit_s3ch16,MSO Audit: Sect 3 Ch16
+PC22,MSO Audit,Sect 3 Ch17,pointers_pc22_msosudit_s3ch17,MSO Audit: Sect 3 Ch17
+PC22,MSO Audit,Sect 3 Ch19,pointers_pc22_msosudit_s3ch19,MSO Audit: Sect 3 Ch19
+PC22,MSO Audit,Sect 3 Ch20,pointers_pc22_msosudit_s3ch20,MSO Audit: Sect 3 Ch20
+PC22,MSO Audit,Sect 3 Ch23,pointers_pc22_msosudit_s3ch23,MSO Audit: Sect 3 Ch23
+PC22,MSO Audit,Sect 3 Ch24,pointers_pc22_msosudit_s3ch24,MSO Audit: Sect 3 Ch24
+PC22,MSO Audit,Other,pointers_pc22_msosudit_various,MSO Audit: Other
+PC22,Performance Audit,Ch-01,pointers_pc22_pa_ch01,Performance Audit: Ch-01
+PC22,Performance Audit,Ch-02,pointers_pc22_pa_ch02,Performance Audit: Ch-02
+PC22,Performance Audit,Ch-03,pointers_pc22_pa_ch03,Performance Audit: Ch-03
+PC22,Performance Audit,Ch-04,pointers_pc22_pa_ch04,Performance Audit: Ch-04
+PC22,Performance Audit,Ch-05,pointers_pc22_pa_ch05,Performance Audit: Ch-05
+PC22,Performance Audit,Ch-06,pointers_pc22_pa_ch06,Performance Audit: Ch-06
+PC22,Performance Audit,Ch-07,pointers_pc22_pa_ch07,Performance Audit: Ch-07
+PC22,PPP Project,Ch-01,pointers_pc22_ppp_ch01,PPP Project: Ch-01
+PC22,PPP Project,Ch-02,pointers_pc22_ppp_ch02,PPP Project: Ch-02
+PC22,PPP Project,Ch-03,pointers_pc22_ppp_ch03,PPP Project: Ch-03
+PC22,PPP Project,Ch-04,pointers_pc22_ppp_ch04,PPP Project: Ch-04
+PC22,PPP Project,Ch-05,pointers_pc22_ppp_ch05,PPP Project: Ch-05
+PC22,PPP Project,Ch-06,pointers_pc22_ppp_ch06,PPP Project: Ch-06
+PC22,PPP Project,Glossary,pointers_pc22_ppp_glos,PPP Project: Glossary
+PC22,Reg Audit Accts 2007,Ch-01,pointers_pc22_reg2007_ch01,Reg Audit Accts 2007: Ch-01
+PC22,Reg Audit Accts 2007,Ch-02,pointers_pc22_reg2007_ch02,Reg Audit Accts 2007: Ch-02
+PC22,Reg Audit Accts 2007,Ch-03,pointers_pc22_reg2007_ch03,Reg Audit Accts 2007: Ch-03
+PC22,Reg Audit Accts 2007,Ch-04,pointers_pc22_reg2007_ch04,Reg Audit Accts 2007: Ch-04
+PC22,Reg Audit Accts 2007,Ch-05,pointers_pc22_reg2007_ch05,Reg Audit Accts 2007: Ch-05
+PC22,Reg Audit Accts 2007,Ch-06,pointers_pc22_reg2007_ch06,Reg Audit Accts 2007: Ch-06
+PC22,Reg Audit Accts 2007,Ch-07,pointers_pc22_reg2007_ch07,Reg Audit Accts 2007: Ch-07
+PC22,Reg Audit Accts 2007,Ch-08,pointers_pc22_reg2007_ch09,Reg Audit Accts 2007: Ch-08
+PC22,Reg Audit Accts 2007,Ch-10,pointers_pc22_reg2007_ch10,Reg Audit Accts 2007: Ch-10
+PC22,Reg Audit Accts 2007,Ch-11,pointers_pc22_reg2007_ch11,Reg Audit Accts 2007: Ch-11
+PC22,Reg Audit Accts 2007,Ch-12,pointers_pc22_reg2007_ch12,Reg Audit Accts 2007: Ch-12
+PC22,Reg Audit Accts 2007,Ch-13,pointers_pc22_reg2007_ch13,Reg Audit Accts 2007: Ch-13
+PC22,Reg Audit Accts 2007,Ch-14,pointers_pc22_reg2007_ch14,Reg Audit Accts 2007: Ch-14
+PC22,Reg Audit Accts 2007,Ch-15,pointers_pc22_reg2007_ch15,Reg Audit Accts 2007: Ch-15
+PC22,Reg Audit Accts 2007,Ch-16,pointers_pc22_reg2007_ch16,Reg Audit Accts 2007: Ch-16
+PC22,Reg Audit Accts 2007,Ch-17,pointers_pc22_reg2007_ch17,Reg Audit Accts 2007: Ch-17
