@@ -24,7 +24,7 @@
     const params = new URLSearchParams(window.location.search);
     const file = params.get('file');
     const type = params.get('type');
-    const CSV_PATH = `/data/${file}`;
+    const CSV_PATH = `https://raw.githubusercontent.com/mktok/sasquizzer_v1/refs/heads/main/data/${file}`;
     const container = document.getElementById('container');
     const title = document.getElementById('title');
 
@@ -60,4 +60,5 @@
     });
   </script>
 </body>
+
 </html>
