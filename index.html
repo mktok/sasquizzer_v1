@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Papers and Quizzes</title>
+  <script src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js"></script>
+  <style>
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:Inter,system-ui,Segoe UI,Roboto,Arial;background:#0f1724;color:#e6eef8;padding:16px;}
+    h1{text-align:center;font-size:20px;margin-bottom:16px;color:#60a5fa;}
+    .paper{background:#111827;border:1px solid rgba(255,255,255,0.1);border-radius:10px;padding:14px;margin-bottom:12px;box-shadow:0 2px 8px rgba(0,0,0,0.3);}
+    .paper h2{font-size:16px;margin-bottom:10px;color:#93c5fd;}
+    ul{list-style:none;display:flex;flex-wrap:wrap;gap:8px;padding:0;margin:0;}
+    li a{display:inline-block;padding:8px 14px;background:#1e293b;color:#e2e8f0;border-radius:8px;text-decoration:none;font-size:14px;transition:all .2s ease;flex:1 1 45%;text-align:center;}
+    li a:hover{background:#60a5fa;color:#0f1724;}
+    @media(min-width:600px){body{padding:24px;}h1{font-size:24px;}li a{flex:1 1 20%;}}
+    .loader{display:inline-block;width:16px;height:16px;border-radius:50%;border:2px solid rgba(255,255,255,0.08);border-top-color:#60a5fa;animation:spin 1s linear infinite;margin-left:5px;}
+    @keyframes spin{to{transform:rotate(360deg)}}
+  </style>
+</head>
+<body>
+  <h1>Available Papers and Quizzes</h1>
+  <div id="container">Loading data <span class="loader"></span></div>
+
+  <script>
+    
+    const CSV_PATH = '/data/select_pc_data.csv';
+    const container = document.getElementById('container');
+
+    function createLink(label, value, type){
+      if(!value || value==='NA') return null;
+      const li = document.createElement('li');
+      const a = document.createElement('a');
+      a.textContent = label;
+      a.href = `quizelist.html?file=${value}.csv&type=${type}`;
+      li.appendChild(a);
+      return li;
+    }
+
+    Papa.parse(CSV_PATH, {
+      download:true,
+      header:true,
+      complete:function(results){
+        const data = results.data.filter(r => r.papercode);
+        container.innerHTML = '';
+
+        data.forEach(row => {
+          const div = document.createElement('div');
+          div.className = 'paper';
+          const title = document.createElement('h2');
+          title.textContent = `${row.papercode}: ${row.papername}`;
+          div.appendChild(title);
+
+          const ul = document.createElement('ul');
+          const types = [
+            ['MCQs', row.mcqs, 'mcqs'],
+            ['Pointers', row.pointers, 'pointers'],
+            ['Fillers', row.fillers, 'fillers'],
+            ['Mocks', row.mocks, 'mocks']
+          ];
+
+          types.forEach(([label,val,type]) => {
+            const link = createLink(label, val, type);
+            if(link) ul.appendChild(link);
+          });
+
+          if(ul.children.length===0){
+            const p = document.createElement('p');
+            p.textContent = 'No quizzes available.';
+            p.style.color = '#94a3b8';
+            div.appendChild(p);
+          } else {
+            div.appendChild(ul);
+          }
+
+          container.appendChild(div);
+        });
+      },
+      error:function(err){
+        container.textContent = 'Failed to load CSV';
+        console.error(err);
+      }
+    });
+  </script>
+</body>
+</html>

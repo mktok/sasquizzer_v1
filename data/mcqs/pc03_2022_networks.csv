@@ -1,0 +1,90 @@
+﻿1 Which of the following is not an scripting language ? ,(A) HTML ,(B) XML ,(C) Postscript ,(D) Javascript,C
+2. Which of the following is a platform free language ,(A) Fortran ,(B) Assembly ,(C) C ,(D) Java,D
+3. A digital signature is ,(A) scanned signature ,(B) signature in binary form ,(C) encrypting information ,(D) handwritten signature,C
+4. Mechanism to protect private networks from outside attack is ,(A) Firewall ,(B) Antivirus ,(C) Digital signature ,(D) Formatting,A
+5. A computer system that permits multiple users to run programs at same time ,(A) Real time system ,(B) Multi programming system ,(C) Time sharing system ,(D) Multi tasking system,D
+6. A computer communication technology that provides a way to interconnect multiple computer across short distance is ,(A) LAN ,(B) MAN ,(C) WAN ,(D) Wireless network,A
+7. Telnet is a service that runs ,(A) Television on net ,(B) Remote program ,(C) Cable TV network ,(D) Telenext,B
+8. A device that forwards data packet from one network to another is called a ,(A) Bridge ,(B) Switch ,(C) Hub ,(D) Gateway,B
+9. Which of the following is the fastest media of data transfer ,(A) Co-axial Cable ,(B) Untwisted Wire ,(C) Telephone Lines ,(D) Fibre Optic,D
+10. Tool that is used to transfer data/files among computers on the Internet ,(A) FTP ,(B) Archie ,(C) TCP ,(D) Gopher,C
+11. HTML is a ,(A) Programming Language ,(B) Scripting Language ,(C) Web Browser ,(D) Network Protocol,B
+12. Secret-key encryption is also known as ,(A) Asymmetric encryption ,(B) Symmetric encryption ,(C) Secret-encryption ,(D) Private encryption,D
+13. The concept of electronic cash is to execute payment by ,(A) Credit Card ,(B) ATM Card ,(C) Using computers over network ,(D) Cheque,C
+14. SMTP is a ,(A) Networking Protocol ,(B) Protocol used for transferring message between end user & Mail Server ,(C) Protocol used for smart card message interchange ,(D) Encryption Standard,B
+15. Digital Signature is ,(A) Scanned Signature on Computer ,(B) Code number of the sender. ,(C) Public Key Encryption. ,(D) Software to recognize signature.,D
+16. Telnet is a ,(A) Network of Telephones ,(B) Television Network ,(C) Remote Login ,(D) Remote Login.,C
+17. The internet is ,(A) Network of networks ,(B) Web site. ,(C) Host ,(D) Server,A
+18. An e-business that allows consumer to name their own price for products and services is following which e-business model? ,(A) B2B ,(B) B2G ,(C) C2C ,(D) C2B,D
+19. Kerberos is an encryption-based system that uses ,(A) Secret key encryption ,(B) Public key encryption ,(C) Private key encryption ,(D) Data key encryption,A
+20. The method(s) of payment for online consumers are ,(A) Electronic cash ,(B) Credit/debit ,(C) Electronic checks ,(D) All of the above,D
+21. DNS is ,(A) The distributed hierarchical naming system ,(B) The vertical naming system ,(C) The horizontal naming system ,(D) The client server system,C
+22. A firewall is ,(A) An established network performance reference point. ,(B) Software or hardware used to isolate a private network from a public network. ,(C) A virus that infects macros. ,(D) A predefined encryption key used to encrypt and decrypt data transmissions.,B
+23. A router ,(A) Screens incoming information. ,(B) Distributes information between networks ,(C) Clears all viruses from a computer system ,(D) Is a work virus.,B
+24. LDAP stands for ,(A) Light weight Data Access Protocol. ,(B) Light weight Directory Access Protocol. ,(C) Large Data Access Protocol. ,(D) Large Directory Access Protocol.,B
+25. E-Commerce is not suitable for ,(A) Sale/Purchase of expensive jewellery and antiques. ,(B) Sale/Purchase of mobile phones. ,(C) Sale/Purchase of branded clothes. ,(D) Online job searching.,D
+26. Amazon.com comes under the following model ,(A) B2B ,(B) B2C ,(C) C2C ,(D) C2B,B
+27. Hubs are present in the network ,"(A) to diagnose line failures, measure and manage traffic flow and simplify reconfiguring of LANs. ",(B) to interconnect the LAN with WANs. ,(C) to interconnect the WANs with WANs. ,(D) to interconnect the WANs with LANs.,B
+28. Firewalls operate by ,(A) The pre-purchase phase. ,(B) isolating Intranet from Extranet. ,(C) Screening packets to/from the Network and provide controllable filtering of network traffic. ,(D) None of the above.,C
+29. The mercantile process model consists of the following pahase(s): ,(A) The pre-purchase phase. ,(B) Purchase consummation phase. ,(C) Post-purchase Interaction phase. ,(D) All of the above.,D
+30. The computer network is ,(A) Network computer with cable ,(B) Network computer without cable ,(C) Both of the above ,(D) None of the above,C
+31. FDDI used which type of physical topology? ,(A) Bus ,(B) Ring ,(C) Star,(D) All Above,B
+32. FTP stands for ,(A) File transfer protocol ,(B) File transmission protocol ,(C) Form transfer protocol ,(D) Form transmission protocol,A
+33. Ethernet system uses which of the following technology. ,(A) Bus ,(B) Ring ,(C) Star ,(D) Tree,A
+34. Which of the following are the network services? ,(A) File service ,(B) Print service ,(C) Database service ,(D) All of the above,D
+"35. If all devices are connected to a central hub, then topology is called ",(A) Bus Topology ,(B) Ring Topology ,(C) Star Topology ,(D) Tree Topology,C
+36. FDDI stands for ,(A) Fiber Distributed Data Interface ,(B) Fiber Data Distributed Interface ,(C) Fiber Dual Distributed Interface ,(D) Fiber Distributed Data Interface,A
+37. Which of the following is an application layer service? ,(A) Network virtual terminal ,"(B) File transfer, access and management ",(C) Mail service ,(D) All of the above,C
+38. Which is the main function of transport layer? ,(A) Node to node delivery ,(B) End to end delivery ,(C) Synchronization ,(D) Updating and maintaining routing tables,B
+39. The ………… layer change bits onto electromagnetic signals. ,(A) Physical ,(B) Transport ,(C) Data Link ,(D) Presentation,A
+"40. A group of computers and other devices connected together is called a network, and the concept of connected computers sharing resources is called ……… ",(A) Networking ,(B) Inter-Network ,(C) Inter-Connection ,(D) Computer Group,A
+"41. A simple cabling method, known as the ………… topology, allows about 30 computers on a maximum cable length of about 600 feet. ",(A) Star ,(B) Ring ,(C) Bus ,(D) Tree,C
+42. …………… is a set of connecting links between LANs. ,(A) CAN ,(B) WAN ,(C) CLAN ,(D) IAN,B
+"43. A ………. line considered as a fast WAN link, transmits at 1.5 Mbps, or 1 million bits per second. ",(A) L1 ,(B) F1 ,(C) W1 ,(D) T1,D
+44. The ……………. elements are specialized computers to connect two or more transmission lines. ,(A) Networking ,(B) Broadcasting ,(C) Switching ,(D) Transfering,C
+"45. In …………… the network contains numerous cables or leased telephone line, each one connecting a pair or IMPs. ",(A) Point-to-Point channels ,(B) Pair-to-Pair channels ,(C) Broadcast channels ,(D) Interface channels,A
+46. The entities comprising the corresponding layers on different layers on different machines are called …………. processes. ,(A) entity ,(B) peer ,(C) peer-to-peer ,(D) layred,B
+47. ……………. entities are entities in the same layer on different machines. ,(A) Software ,(B) Service ,(C) Peer ,(D) Interface,C
+"48. To use a …………………. network service, the service user first establishes a connection, uses the connection, and terminates the connection. ",(A) connection-oriented ,(B) connection-less ,(C) service-oriented ,(D) service-less,A
+"49. In ……………………… service, each message carries the full destination address, and each one is routed through the system independent of all others. ",(A) connection-oriented ,(B) connection-less ,(C) service-oriented ,(D) service-less,B
+"50. In mesh topology, relationship between one device and another is …………. ",(A) Primary to peer ,(B) Peer to primary ,(C) Primary to secondary ,(D) Peer to Peer,D
+51. The performance of data communications network depends on …………. ,(A) Number of users ,(B) The hardware and software ,(C) The transmission ,(D) All of the above,D
+"52. Find out the OSI layer, which performs token management. ",(A) Network Layer ,(B) Transport Layer ,(C) Session Layer ,(D) Presentation Layer,C
+53.The name of the protocol which provides virtual terminal in TCP/IP model is. ,(A) Telnet ,(B) SMTP ,(C) HTTP,(D) None of the above,A
+54. The layer one of the OSI model is ,(A) Physical layer ,(B) Link layer ,(C) Router layer ,(D) Broadcast layer,A
+55. What is the name of the network topology in which there are bi-directional links between each possible node? ,(A) Ring ,(B) Star ,(C) Tree ,(D) Mesh,D
+56. What is the commonly used unit for measuring the speed of data transmission? ,(A) Bytes per second ,(B) Baud ,(C) Bits per second ,(D) Both B and C,B
+57. Which of the communication modes support two way traffic but in only once direction of a time? ,(A) Simplex ,(B) Half-duplex ,(C) Three – quarter’s duplex ,(D) Full duplex,B
+58. The loss in signal power as light travels down the fiber is called …………. ,(A) Attenuation ,(B) Propagation ,(C) Scattering ,(D) Interruption,A
+59. ……………………. is an interconnection of networks that provide universal communication services over heterogeneous physical networks. ,(A) Internet ,(B) Intranet ,(C) Network ,(D) LAN,A
+"60. Commercial networks providing access to the ………………. to subscribers, and networks owned by commercial organizations for internal use that also have connections to the internet. ",(A) backbones ,(B) Network access points(NAPs) ,(C) None of the Above,(D) A & B,D
+61. The …………………… layer is provided by the program that uses TCP/IP for communication. ,(A) Transport ,(B) Application ,(C) Internetwork ,(D) Network interface,B
+62. The …………………. layer Provides the end-to-end data transfer by delivering data from an application to its remote peer. ,(A) Transport ,(B) Application ,(C) Internetwork ,(D) Network interface,A
+"63. ……………. provides connection-oriented reliable data delivery, duplicate data suppression, congestion control, and flow control. ",(A) TCP ,(B) IP ,(C) UDP ,(D) ICMP,A
+64. ………………. is used by applications that need a fast transport mechanism and can tolerate the loss of some data. ,(A) TCP ,(B) IP ,(C) UDP ,(D) ICMP,C
+"65. ……………… is a connection-less protocol that does not assume reliability from lower layers, which does not provide reliability, flow control, or error recovery. ",(A) Transmission control protocol ,(B) Internet protocol ,(C) User Datagram Protocol ,(D) Simple Mail Transfer Protocol,B
+66. A network that needs human beings to manually route signals is called…. ,(A) Fiber Optic Network ,(B) Bus Network ,(C) T-switched network ,(D) Ring network,C
+67. TCP/IP ……………. layer corresponds to the OSI models to three layers. ,(A) Application ,(B) Presentation ,(C) Session ,(D) Transport,A
+68. Which of the transport layer protocols is connection-less? ,(A) UDP ,(B) TCP ,(C) FTP ,(D) Nvt,A
+69. Which of the following applications allows a user to access and change remote files without actual transfer? ,(A) DNS ,(B) FTP ,(C) NFS ,(D) Telnet,C
+70. The data unit in the TCP/IP data link layer called a …. ,(A) Message ,(B) Segment ,(C) Datagram ,(D) Frame,D
+71. DNS can obtain the ……………. of host if its domain name is known and vice versa. ,(A) Station address ,(B) IP address ,(C) Port address ,(D) Checksum,B
+72. Which of the following OSI layers correspond to TCP/IP’s application layer? ,(A) Application ,(B) Presentation ,(C) Session ,(D) All of the above,D
+73. Devices on one network can communicate with devices on another network via a ……. ,(A) File Server ,(B) Utility Server ,(C) Printer Server ,(D) Gateway,D
+74. A communication device that combines transmissions from several I/O devices into one line is a ,(A) Concentration ,(B) Modifier ,(C) Multiplexer ,(D) Full duplex file,C
+75. Which layers of the OSI determines the interface often system with the user? ,(A) Network ,(B) Application ,(C) Data link ,(D) Session,B
+76. Which of the following of the TCP/IP protocols is the used for transferring files from one machine to another? ,(A) FTP ,(B) SNMP ,(C) SMTP ,(D) Rpe,A
+77. In which OSI layers does the FDDI protocol operate? ,(A) Physical ,(B) Data link ,(C) Network ,(D) A and B,D
+"78. In FDDI, data normally travel on ……………… ",(A) The primary ring ,(B) The Secondary ring ,(C) Both rings ,(D) Neither ring,A
+79. The …………layer of OSI model can use the trailer of the frame for error detection. ,(A) Physical ,(B) Data link ,(C) Transport ,(D) Presentation,B
+"80. In a …………….topology, if there are n devices in a network, each device has n-1 ports for cables. ",(A) Mesh ,(B) Star ,(C) Bus ,(D) Ring,A
+81. Another name for Usenet is ,(A) Gopher ,(B) Newsgroups ,(C) Browser ,(D) CERN,B
+"82. The standard suit of protocols used by the Internet, Intranets, extra-nets and some other networks. ",(A) TCP/IP ,(B) Protocol ,(C) Open system ,(D) Internet work processor,A
+"83. State whether the following is True or False. i) In bus topology, heavy Network traffic slows down the bus speed. ii) It is multi-point configuration. ","(A) True, True ","(B) True, False ","(C) False, True ","(D) False, False",A
+84. Which of the following is the logical topology? ,(A) Bus ,(B) Tree ,(C) Star ,(D) Both A and B,C
+85. Which of the following is/ are the drawbacks of Ring Topology? ,"(A) Failure of one computer, can affect the whole network ",(B) Adding or removing the computers disturbs the network activity. ,"(C) If the central hub fails, the whole network fails to operate. ",(D) Both of A and B,D
+86. Match the following IEEE No to their corresponding Name for IEEE 802 standards for LANs. i) 802.3 (a) WiFi ii) 802.11 (b) WiMa iii) 802.15.1  (c) Ethernet iv) 802.16  (d) Bluetooth  ,"(A) i-b, ii-c, iii-d, iv-a ","(B) i-c, ii-d, iii-a, iv-b ","(C) i-c, ii-a, iii-d, iv-b ","(D) i-b, ii-d, iii-c, iv-a",C
+"87. …………… is the predominant form of Fast Ethernet, and runs over two pairs of category 5 or above cable. ",(A) 100 BASE-T ,(B) 100 BASE-TX ,(C) 100 BASE-T4 ,(D) 100 BASE-T2,B
+88. Which of the following is not the layer of TCP/IP protocol? ,(A) Application Layer ,(B) Session Layer ,(C) Transport Layer ,(D) Internetwork layer,B
+"89. ………. was the first step in the evolution of Ethernet from a coaxial cable bus to hub managed, twisted pair network. ",(A) Star LAN ,(B) Ring LAN ,(C) Mesh LAN ,(D) All of the above,A
+"90. IEEE 802.3ab defines Gigabit Ethernet transmission over unshielded twisted pair (UTP) category 5, 5e or 6 cabling known as ………………. ",(A) 1000 BASE-T ,(B) 1000 BASE-SX ,(C) 1000 BASE-LX ,(D) 1000 BASE-CX,A
