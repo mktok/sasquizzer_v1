@@ -72,7 +72,7 @@
     const params = new URLSearchParams(window.location.search);
     const file = params.get('file');
     const type = params.get('type');
-    const CSV_PATH = `/data/${type}/${file}`;
+    const CSV_PATH = `https://raw.githubusercontent.com/mktok/sasquizzer_v1/refs/heads/main/data/${type}/${file}`;
     const status = document.getElementById('status');
     const qnumEl = document.getElementById('qnum');
     const questionEl = document.getElementById('question');
@@ -203,3 +203,4 @@
   </script>
 </body>
 </html>
+
