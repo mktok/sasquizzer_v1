@@ -3,62 +3,86 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Quiz List</title>
+  <title>SAS Quizzer by MKT</title>
   <script src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js"></script>
-  <style>
-    *{box-sizing:border-box;margin:0;padding:0}
-    body{font-family:Inter,system-ui,Segoe UI,Roboto,Arial;background:#0f1724;color:#e6eef8;padding:16px;}
-    h1{text-align:center;font-size:20px;margin-bottom:16px;color:#60a5fa;}
-    .quiz-item{background:#111827;border:1px solid rgba(255,255,255,0.1);border-radius:10px;padding:14px;margin-bottom:12px;box-shadow:0 2px 8px rgba(0,0,0,0.3);}
-    .quiz-item a{color:#93c5fd;text-decoration:none;font-size:16px;display:block;}
-    .quiz-item a:hover{color:#60a5fa;}
-    .loader{display:inline-block;width:16px;height:16px;border-radius:50%;border:2px solid rgba(255,255,255,0.08);border-top-color:#60a5fa;animation:spin 1s linear infinite;margin-left:5px;}
-    @keyframes spin{to{transform:rotate(360deg)}}
-  </style>
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
-  <h1 id="title">Quiz List</h1>
-  <div id="container">Loading quizzes <span class="loader"></span></div>
+
+<body class="min-h-screen bg-gray-900 text-gray-100 flex flex-col">
+
+  <!-- Header -->
+  <header class="bg-gray-800 shadow-md py-4 px-4 flex items-center justify-between">
+    <a href="index.html" class="text-sky-400 font-bold text-lg hover:text-sky-300 transition">
+      ← Back
+    </a>
+    <a class="text-2xl font-bold text-sky-400 flex-1 text-center" href="/">SAS Quizzer </a>
+    <div class="w-15"></div> <!-- Spacer for balance -->
+  </header>
+
+  <!-- Main Content -->
+  <main class="flex-grow flex flex-col items-center px-4 py-6">
+    <h2 id="title" class="text-center text-2xl font-semibold text-sky-300 mb-6">Quiz List</h2>
+
+    <div id="container" class="w-full max-w-3xl text-center text-gray-400">
+      Loading quizzes 
+      <span class="inline-block w-4 h-4 border-2 border-gray-600 border-t-sky-400 rounded-full animate-spin ml-2"></span>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="fixed bottom-0 left-0 w-full bg-gray-800 text-gray-400 text-sm py-2 text-center border-t border-gray-700">
+    © 2025 SAS Quizzer by MKT
+  </footer>
 
   <script>
     const params = new URLSearchParams(window.location.search);
     const file = params.get('file');
     const type = params.get('type');
+    const papercode = params.get('papercode');
+    const label = params.get('label');
     const CSV_PATH = `https://raw.githubusercontent.com/mktok/sasquizzer_v1/refs/heads/main/data/${file}`;
     const container = document.getElementById('container');
     const title = document.getElementById('title');
 
-    // Update title dynamically based on quiz type
-    title.textContent = `Quiz List for ${type.toUpperCase()}`;
+    // Dynamic title
+    title.textContent = `${papercode} : Select ${label}`;
 
     Papa.parse(CSV_PATH, {
-      download:true,
-      header:true,
-      complete:function(results){
+      download: true,
+      header: true,
+      complete: function(results) {
         const data = results.data.filter(r => r.quizefile);
         container.innerHTML = '';
 
-        if(data.length === 0){
+        if (data.length === 0) {
           container.textContent = 'No quizzes found.';
           return;
         }
 
+        const list = document.createElement('div');
+        list.className = 'w-full flex flex-col gap-3';
+
         data.forEach(row => {
-          const div = document.createElement('div');
-          div.className = 'quiz-item';
+          const card = document.createElement('div');
+          card.className = 'bg-gray-800 border border-gray-700 rounded-xl p-4 hover:shadow-lg hover:shadow-sky-700/20 transition';
+
           const a = document.createElement('a');
           a.textContent = row.displayfield;
-          a.href = `${type}.html?file=${row.quizefile}.csv&type=${type}`;
-          div.appendChild(a);
-          container.appendChild(div);
+          a.href = `${type}.html?file=${row.quizefile}.csv&type=${type}&displayfield=${encodeURIComponent(row.displayfield)}`;
+          a.className = 'block text-lg text-sky-400 font-medium hover:text-sky-300 transition text-left';
+
+          card.appendChild(a);
+          list.appendChild(card);
         });
+
+        container.appendChild(list);
       },
-      error:function(err){
+      error: function(err) {
         container.textContent = 'Failed to load CSV';
         console.error(err);
       }
     });
   </script>
-</body>
 
+</body>
 </html>
