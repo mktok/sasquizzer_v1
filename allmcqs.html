@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en" class="h-full">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>SAS Quizzer by MKTOK</title>
+  <script src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="h-full flex flex-col bg-gray-900 text-gray-100">
+
+  <!-- Header with Back Button -->
+  <header class="fixed top-0 left-0 right-0 flex items-center justify-between px-4 py-3 bg-gray-800 border-b border-gray-700">
+    <!-- <footer class="fixed bottom-0 left-0 w-full bg-gray-800 text-gray-400 text-sm py-2 text-center border-t border-gray-700"> -->
+
+    <button id="backButton" class="text-sky-400 hover:text-sky-300 font-semibold text-lg transition">
+      ← Back
+    </button>
+    <!-- <h1 class="text-2xl font-bold text-sky-400 text-center flex-grow">SAS Quizzer</h1> -->
+    <a class="text-2xl font-bold text-sky-400 text-center flex-grow" href="/">SAS Quizzer</a>
+
+    <div class="w-16"></div> <!-- spacer -->
+  </header>
+
+  <main class="flex-grow px-3 py-4 flex justify-center ">
+    <div class="w-full max-w-4xl mb-24 mt-16" >
+      <h2 id="title" class="text-xl font-bold text-sky-400 text-center mb-4"></h2>
+      <div id="status" class="hidden bg-red-700 text-white text-center py-2 text-sm mb-3 rounded-lg"></div>
+      <div id="questionsContainer" class="space-y-4 "></div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <!-- <footer class="fixed bottom-0 left-0 right-0 bg-gray-800 border-t border-gray-700 text-gray-400 text-xs text-center py-2 flex items-center  px-3">
+    <div>Scroll to view all questions</div>
+    <div>© 2025 SAS Quizzer by MKT</div>
+  </footer> -->
+    <footer class="fixed bottom-0 left-0 w-full bg-gray-800 text-gray-400 text-sm py-2 text-center border-t border-gray-700">
+    © 2025 SAS Quizzer by MKTOK
+  </footer>
+
+  <script>
+    // Back Button
+    document.getElementById('backButton').addEventListener('click', () => window.history.go(-1));
+
+    // Query Params
+    const params = new URLSearchParams(window.location.search);
+    const file = params.get('file');
+    const type = params.get('type');
+    const displayfield = params.get('displayfield');
+    const CSV_PATH = `https://raw.githubusercontent.com/mktok/sasquizzer_v1/refs/heads/main/data/${type}/${file}`;
+
+
+    // Elements
+    const title = document.getElementById('title');
+    const status = document.getElementById('status');
+    const container = document.getElementById('questionsContainer');
+
+    title.textContent = `${displayfield || 'All MCQs'}`;
+
+    // Normalize Fields
+    function normalizeFields(fields) {
+      fields = fields.map(f => typeof f === 'string' ? f.trim() : f);
+      if (fields.length >= 6) {
+        const answer = fields[5];
+        const hint = fields[6];
+        const options = fields.slice(1, 5);
+        return {
+          question: fields[0],
+          options,
+          answer: (answer || '').trim().charAt(0).toUpperCase(),
+          hint: hint || ''
+        };
+      }
+      return null;
+    }
+
+    function renderAll(questions) {
+      container.innerHTML = '';
+      if (!questions.length) {
+        container.innerHTML = `<div class="text-center text-gray-400">No questions found.</div>`;
+        return;
+      }
+
+      questions.forEach((q, index) => {
+        const card = document.createElement('div');
+        card.className =
+          'bg-gray-800 rounded-xl shadow-lg p-4 border border-gray-700 hover:border-sky-500 transition';
+
+        const questionHTML = `
+          <div class="mb-3">
+            <div class="text-sky-400 font-bold mb-1 text-lg">Question ${index + 1}</div>
+            <div class="text-lg font-medium">${q.question}</div>
+          </div>
+          <ul class="space-y-2 mb-3">
+            ${q.options.map((opt, i) => {
+              const optLetter = String.fromCharCode(65 + i);
+              const isCorrect = optLetter === q.answer;
+              return `<li class="px-3 py-2 rounded-lg border ${isCorrect ? 'border-green-500 bg-green-900 text-white border-4' : 'border-gray-700 bg-gray-700'}">
+                        <b>${optLetter}.</b> ${opt}
+                      </li>`;
+            }).join('')}
+          </ul>
+          <div class="mt-2 text-sm text-gray-300">
+            <b class="text-sky-400 font-bold text-lg ">Anaswer : ${q.answer || '<span class="text-red-500">No Answer provided</span>'} </b>
+          </div>
+          <div class="mt-2 text-sm text-gray-300">
+            <b class="text-sky-400">Hint:</b> ${q.hint || '<span class="text-gray-500">No hint provided</span>'}
+          </div>
+        `;
+
+        card.innerHTML = questionHTML;
+        container.appendChild(card);
+      });
+    }
+
+    Papa.parse(CSV_PATH, {
+      download: true,
+      skipEmptyLines: true,
+      complete: function (res) {
+        try {
+          const questions = res.data.map(normalizeFields).filter(Boolean);
+          if (!questions.length) {
+            status.textContent = 'No valid questions found.';
+            status.classList.remove('hidden');
+            return;
+          }
+          renderAll(questions);
+        } catch (err) {
+          status.textContent = 'Error parsing questions.';
+          status.classList.remove('hidden');
+          console.error(err);
+        }
+      },
+      error: function (err) {
+        status.textContent = `Error loading CSV file.`;
+        status.classList.remove('hidden');
+        console.error(err);
+      }
+    });
+  </script>
+</body>
+</html>
