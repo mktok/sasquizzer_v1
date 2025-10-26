@@ -18,7 +18,7 @@
       ← Back
     </button>
     <!-- <h1 class="text-2xl font-bold text-sky-400 text-center flex-grow">SAS Quizzer</h1> -->
-    <a class="text-2xl font-bold text-sky-400 text-center flex-grow" href="/">SAS Quizzer</a>
+    <a class="text-2xl font-bold text-sky-400 text-center flex-grow" href="/sasquizzer_v1/">SAS Quizzer</a>
 
     <div class="w-16"></div> <!-- spacer -->
   </header>
@@ -86,7 +86,7 @@
       questions.forEach((q, index) => {
         const card = document.createElement('div');
         card.className =
-          'bg-gray-800 rounded-xl shadow-lg p-4 border border-gray-700 hover:border-sky-500 transition';
+          'bg-gray-800 rounded-xl shadow-lg p-4 border border-gray-500  border-3 hover:border-gray-500 transition';
 
         const questionHTML = `
           <div class="mb-3">
@@ -97,7 +97,7 @@
             ${q.options.map((opt, i) => {
               const optLetter = String.fromCharCode(65 + i);
               const isCorrect = optLetter === q.answer;
-              return `<li class="px-3 py-2 rounded-lg border ${isCorrect ? 'border-green-500 bg-green-900 text-white border-4' : 'border-gray-700 bg-gray-700'}">
+              return `<li class="px-3 py-2 rounded-lg border  text-white bg-gray-700/50 ${isCorrect ? 'border-gray-500  border-4' : 'border-gray-700 '}">
                         <b>${optLetter}.</b> ${opt}
                       </li>`;
             }).join('')}
@@ -142,4 +142,5 @@
   </script>
 </body>
 </html>
+
 
