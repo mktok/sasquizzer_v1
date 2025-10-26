@@ -6,37 +6,60 @@
   <title>SAS Quizzer by MKTOK</title>
   <script src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js"></script>
   <script src="https://cdn.tailwindcss.com"></script>
+
+  <style>
+    @media print {
+      body {
+        background: white !important;
+        color: black !important;
+        -webkit-print-color-adjust: exact;
+      }
+      header, footer, #backButton, .no-print {
+        display: none !important;
+      }
+      .print-card {
+        page-break-inside: avoid;
+        border: 1px solid #bbb !important;
+        background: white !important;
+        color: black !important;
+        box-shadow: none !important;
+      }
+      .print-card li {
+        border-color: #aaa !important;
+      }
+      .print-answer {
+        color: #006400 !important;
+      }
+      .print-hint {
+        color: #333 !important;
+      }
+    }
+  </style>
 </head>
 
 <body class="h-full flex flex-col bg-gray-900 text-gray-100">
 
-  <!-- Header with Back Button -->
+  <!-- Header with Back & Print -->
   <header class="fixed top-0 left-0 right-0 flex items-center justify-between px-4 py-3 bg-gray-800 border-b border-gray-700">
-    <!-- <footer class="fixed bottom-0 left-0 w-full bg-gray-800 text-gray-400 text-sm py-2 text-center border-t border-gray-700"> -->
-
     <button id="backButton" class="text-sky-400 hover:text-sky-300 font-semibold text-lg transition">
       ← Back
     </button>
-    <!-- <h1 class="text-2xl font-bold text-sky-400 text-center flex-grow">SAS Quizzer</h1> -->
-    <a class="text-2xl font-bold text-sky-400 text-center flex-grow" href="/sasquizzer_v1/">SAS Quizzer</a>
-
-    <div class="w-16"></div> <!-- spacer -->
+    <a class="text-2xl font-bold text-sky-400 text-center flex-grow" href="/">SAS Quizzer</a>
+    <button onclick="window.print()" class="no-print text-sky-400 hover:text-sky-300 font-semibold text-lg transition">
+      🖨 Print
+    </button>
   </header>
 
-  <main class="flex-grow px-3 py-4 flex justify-center ">
-    <div class="w-full max-w-4xl mb-24 mt-16" >
+  <main class="flex-grow px-3 py-4 flex justify-center">
+    <div class="w-full max-w-4xl mb-24 mt-16">
       <h2 id="title" class="text-xl font-bold text-sky-400 text-center mb-4"></h2>
       <div id="status" class="hidden bg-red-700 text-white text-center py-2 text-sm mb-3 rounded-lg"></div>
-      <div id="questionsContainer" class="space-y-4 "></div>
+      <div id="questionsContainer" class="space-y-4"></div>
     </div>
   </main>
 
   <!-- Footer -->
-  <!-- <footer class="fixed bottom-0 left-0 right-0 bg-gray-800 border-t border-gray-700 text-gray-400 text-xs text-center py-2 flex items-center  px-3">
-    <div>Scroll to view all questions</div>
-    <div>© 2025 SAS Quizzer by MKT</div>
-  </footer> -->
-    <footer class="fixed bottom-0 left-0 w-full bg-gray-800 text-gray-400 text-sm py-2 text-center border-t border-gray-700">
+  <footer class="fixed bottom-0 left-0 w-full bg-gray-800 text-gray-400 text-sm py-2 text-center border-t border-gray-700">
     © 2025 SAS Quizzer by MKTOK
   </footer>
 
@@ -50,7 +73,6 @@
     const type = params.get('type');
     const displayfield = params.get('displayfield');
     const CSV_PATH = `https://raw.githubusercontent.com/mktok/sasquizzer_v1/refs/heads/main/data/${type}/${file}`;
-
 
     // Elements
     const title = document.getElementById('title');
@@ -86,27 +108,28 @@
       questions.forEach((q, index) => {
         const card = document.createElement('div');
         card.className =
-          'bg-gray-800 rounded-xl shadow-lg p-4 border border-gray-500  border-3 hover:border-gray-500 transition';
+          'print-card bg-gray-800 rounded-xl shadow-lg p-4 border border-gray-600 hover:border-gray-300 transition';
 
         const questionHTML = `
           <div class="mb-3">
-            <div class="text-sky-400 font-bold mb-1 text-lg">Question ${index + 1}</div>
-            <div class="text-lg font-medium">${q.question}</div>
+            <div class="text-sky-400 font-bold mb-1 text-lg print:text-black">Question ${index + 1}</div>
+            <div class="text-lg font-medium print:text-black">${q.question}</div>
           </div>
           <ul class="space-y-2 mb-3">
             ${q.options.map((opt, i) => {
               const optLetter = String.fromCharCode(65 + i);
               const isCorrect = optLetter === q.answer;
-              return `<li class="px-3 py-2 rounded-lg border  text-white bg-gray-700/50 ${isCorrect ? 'border-gray-500  border-4' : 'border-gray-700 '}">
+              return `<li class="px-3 py-2 rounded-lg border  text-white bg-gray-700/50 print:bg-white print:text-black  ${isCorrect ? 'border-gray-500  border-4' : 'border-gray-700 '}">
+
                         <b>${optLetter}.</b> ${opt}
                       </li>`;
             }).join('')}
           </ul>
-          <div class="mt-2 text-sm text-gray-300">
-            <b class="text-sky-400 font-bold text-lg ">Answer : ${q.answer || '<span class="text-red-500">No Answer provided</span>'} </b>
+          <div class="mt-2 text-sm text-gray-300 print:text-black">
+            <b class="text-sky-400 font-bold text-lg print-answer">Answer: ${q.answer || '<span class="text-red-500">No Answer provided</span>'}</b>
           </div>
-          <div class="mt-2 text-sm text-gray-300">
-            <b class="text-sky-400">Hint:</b> ${q.hint || '<span class="text-gray-500">No hint provided</span>'}
+          <div class="mt-2 text-sm text-gray-300 print-hint">
+            <b class="text-sky-400 print:text-black">Hint:</b> ${q.hint || '<span class="text-gray-500 print:text-gray-500">No hint provided</span>'}
           </div>
         `;
 
@@ -142,5 +165,3 @@
   </script>
 </body>
 </html>
-
-
