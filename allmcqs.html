@@ -12,7 +12,7 @@
       body {
         background: white !important;
         color: black !important;
-        -webkit-print-color-adjust: exact;
+        /* -webkit-print-color-adjust: exact; */
       }
       header, footer, #backButton, .no-print {
         display: none !important;
@@ -28,10 +28,10 @@
         border-color: #aaa !important;
       }
       .print-answer {
-        color: #006400 !important;
+        color: black !important;
       }
       .print-hint {
-        color: #333 !important;
+        color: black !important;
       }
     }
   </style>
@@ -44,7 +44,7 @@
     <button id="backButton" class="text-sky-400 hover:text-sky-300 font-semibold text-lg transition">
       ← Back
     </button>
-    <a class="text-2xl font-bold text-sky-400 text-center flex-grow" href="index.html">SAS Quizzer</a>
+    <a class="text-2xl font-bold text-sky-400 text-center " href="index.html">SAS Quizzer</a>
     <button onclick="window.print()" class="no-print text-sky-400 hover:text-sky-300 font-semibold text-lg transition">
       🖨 Print
     </button>

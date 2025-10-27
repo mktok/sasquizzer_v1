@@ -15,15 +15,15 @@
     <a href="index.html" class="text-sky-400 font-bold text-lg hover:text-sky-300 transition">
       ← Back
     </a>
-    <a class="text-2xl font-bold text-sky-400 flex-1 text-center" href="index.html">SAS Quizzer </a>
-    <div class="w-15"></div> <!-- Spacer for balance -->
+    <a class="text-2xl font-bold text-sky-400 flex text-center" href="index.html">SAS Quizzer</a>
+    <div class="w-15"></div>
   </header>
 
   <!-- Main Content -->
   <main class="flex-grow flex flex-col items-center px-4 py-6 mb-24">
     <h2 id="title" class="text-center text-2xl font-semibold text-sky-300 mb-6">Quiz List</h2>
 
-    <div id="container" class="w-full max-w-3xl text-center text-gray-400">
+    <div id="container" class="w-full max-w-4xl text-center text-gray-400">
       Loading quizzes 
       <span class="inline-block w-4 h-4 border-2 border-gray-600 border-t-sky-400 rounded-full animate-spin ml-2"></span>
     </div>
@@ -44,7 +44,6 @@
     const container = document.getElementById('container');
     const title = document.getElementById('title');
 
-    // Dynamic title
     title.textContent = `${papercode} : Select ${label}`;
 
     Papa.parse(CSV_PATH, {
@@ -59,23 +58,41 @@
           return;
         }
 
-        const list = document.createElement('div');
-        list.className = 'w-full flex flex-col gap-3';
+        // Group by bookname
+        const grouped = data.reduce((acc, row) => {
+          if (!acc[row.bookname]) acc[row.bookname] = [];
+          acc[row.bookname].push(row);
+          return acc;
+        }, {});
 
-        data.forEach(row => {
-          const card = document.createElement('div');
-          card.className = 'bg-slate-700 border border-gray-700 rounded-xl p-4 hover:shadow-lg hover:shadow-sky-700/20 transition';
+        const wrapper = document.createElement('div');
+        wrapper.className = 'w-full flex flex-col gap-6';
 
-          const a = document.createElement('a');
-          a.textContent = row.displayfield;
-          a.href = `${type}.html?file=${row.quizefile}.csv&type=${type}&displayfield=${encodeURIComponent(row.displayfield)}`;
-          a.className = 'block text-lg text-white font-medium hover:text-sky-300 transition text-left';
+        Object.keys(grouped).forEach(book => {
+          const section = document.createElement('section');
+          section.className = 'text-left bg-gray-700/50 rounded-xl shadow-lg border border-gray-500/90  overflow-hidden';
 
-          card.appendChild(a);
-          list.appendChild(card);
+          const header = document.createElement('div');
+          header.className = 'bg-sky-600/70 text-white font-semibold px-4 py-2 border-b border-gray-700';
+          header.textContent = book;
+          section.appendChild(header);
+
+          const grid = document.createElement('div');
+          grid.className = 'grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3 p-2';
+
+          grouped[book].forEach(row => {
+            const card = document.createElement('a');
+            card.href = `${type}.html?file=${row.quizefile}.csv&type=${type}&displayfield=${encodeURIComponent(row.displayfield)}`;
+            card.className = 'block bg-gray-700  text-sky-100 hover:bg-sky-600 hover:text-black rounded-xl p-2 border border-gray-600 text-center transition shadow hover:shadow-sky-700/30';
+            card.textContent = row.chapter;
+            grid.appendChild(card);
+          });
+
+          section.appendChild(grid);
+          wrapper.appendChild(section);
         });
 
-        container.appendChild(list);
+        container.appendChild(wrapper);
       },
       error: function(err) {
         container.textContent = 'Failed to load CSV';
@@ -86,5 +103,3 @@
 
 </body>
 </html>
-
-
