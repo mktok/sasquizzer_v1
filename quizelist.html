@@ -40,7 +40,7 @@
     const type = params.get('type');
     const papercode = params.get('papercode');
     const label = params.get('label');
-    const CSV_PATH = `https://raw.githubusercontent.com/mktok/sasquizzer_v1/refs/heads/main/data/${file}`;
+    const CSV_PATH = `https://github.com/mktok/sasquizzer_v1/data/${file}`;
     const container = document.getElementById('container');
     const title = document.getElementById('title');
 
@@ -68,7 +68,7 @@
 
           const a = document.createElement('a');
           a.textContent = row.displayfield;
-          a.href = `${type}.html?file=${row.quizefile}.csv&type=${type}&displayfield=${encodeURIComponent(row.displayfield)}`;
+          a.href = `${type}.html?file=${row.quizefile}.html&type=${type}&displayfield=${encodeURIComponent(row.displayfield)}`;
           a.className = 'block text-lg text-white font-medium hover:text-sky-300 transition text-left';
 
           card.appendChild(a);
