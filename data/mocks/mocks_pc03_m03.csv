@@ -1,0 +1,30 @@
+﻿1. The binary system uses powers of ,(a) 2 ,(b) 4 ,(c) 8 ,(d) 16,A
+2. Which part interprets program instructions and initiate control operations? ,(a) Logic Unit ,(b) Control Unit ,(c) Storage Unit ,(d) ALU Unit,B
+3. Large collections of files are called ,(a) Records ,(b) Fields ,(c) Database ,(d) documents,C
+4. The distinguishable parts of a record are called ,(a) File ,(b) Data ,(c) Database ,(d) Field,D
+5. Two files may be joined into a third file if ,(a) They have a row in common ,(b) They have a field in common ,(c) They have no row in common ,(d) They have no field in common,B
+6. An audit trail ,(a) is used to restore lost information ,(b) is used to make back-up copies ,(c) is used to export information ,(d) is the recorded history of operations performed on a file,D
+7. The language used in application programs to request data from the DBMS is referred to as the ,(a) DML ,(b) DDL ,(c) DSL ,(d) DDR,A
+8. Data security threats include ,(a) Hardware failure ,(b) Privacy invasion ,(c) Manipulation of data ,(d) All of the above,D
+9. A number of related records that are treated as a unit is called ,(a) Data ,(b) Field ,(c) File ,(d) Batch,C
+10. Benefits of the data base management system are except ,(a) simultaneous access to multiple files ,(b) collection of programs for managing data in a single fil ,(c) ability to handle huge volumes of data and multiple concurrent user ,"(d) maintains data integrity, consistency, security, and appreciable system performance",B
+"11. Periodically adding, changing and deleting file records is called file ",(a) Updating ,(b) Upgrading ,(c) Renewal ,(d) Structuring,A
+12. The language used by most of the DBMSs for helping their users to access data is ,(a) SQL ,(b) DB2 ,(c) Query Language ,(d) Hash,C
+13. The way the data is stored in the file is described by ,(a) Field ,(b) Records ,(c) File Structure ,(d) File diagram,C
+14. A report generator uses to ,(a) Enter data ,(b) Print file on paper ,(c) Update data ,(d) All of the above,B
+15. The slowest transmission speed are those of ,(a) Co-axial cable ,(b) Optical Fibre ,(c) Ethernet ,(d) Twisted-pair wire,D
+16. The 0 and 1 in the binary numbering system are called binary digits or _____ ,(a) Bits ,(b) Bytes ,(c) Kilobytes ,(d) Decimal Bytes,A
+17. Process is ,(a) program in High level language kept on disk ,(b) contents of main memory ,(c) a program in execution ,(d) a job in secondary memory,C
+18. A large number of computers in a wide geographical area can be efficiently connected using ,(a) Twisted pair cable ,(b) Co-axial cable ,(c) Communication Satellite ,(d) All of the above,C
+19. Group of instructions that directs a computer is called ,(a) Control ,(b) Programme ,(c) Logic ,(d) Execution,B
+20. How many hosts are attached to each of the local area networks at a site? ,(a) 1024 ,(b) 64 ,(c) 128 ,(d) 254,D
+21. Which of the following TCP/IP protocol is used for transferring electronic mail messages from one machine to another ,(a) SMMP ,(b) SMTP ,(c) FTP ,(d) URL,B
+22. Which of the following is used for modulation and demodulation ,(a) Modem ,(b) Protocol ,(c) Multiplier ,(d) Gateway,A
+23. Frames from one LAN can be transmitted to another LAN via the device ,(a) Modem ,(b) Router ,(c) Repeater ,(d) Bridge,D
+24. The two kinds of main Memory are ,(a) Primary and Secondary Memory ,(b) Static and Volatile Memory ,(c) Random and Sequential Memory ,(d) RAM and ROM,D
+25. Programs designed to perform specific tasks is called known as ,(a) System Software ,(b) Utility Software ,(c) Application Software ,(d) Operating Software,C
+26. The arranging of data in a logical sequence is called ,(a) Sorting ,(b) Designing ,(c) Classifying ,(d) Indexing,A
+27. A multi programming system is one that can ,(a) share hardware resources with many programs simultaneously ,(b) carry-out many programs simultaneously ,(c) use many operating systems ,(d) carryout programme even without instruction,B
+28. A high speed device used in CPU for temporary storage during processing is called ,(a) Bus ,(b) Storage ,(c) Register ,(d) Recorder,C
+29. Which of the following holds data and processing instructions temporarily until the CPU needs it? ,(a) ROM ,(b) RAM ,(c) Control Unit ,(d) Main Memory,D
+30. What is the name of the printer which prints all the As’ in a line before all the Bs’ ,(a) Line Printer ,(b) Dot-matrix ,(c) Daisy Wheel Printer ,(d) Drum Printer,A
