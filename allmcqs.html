@@ -115,22 +115,22 @@
             <div class="text-sky-400 font-bold mb-1 text-lg print:text-black">Question ${index + 1}</div>
             <div class="text-lg font-medium print:text-black">${q.question}</div>
           </div>
-          <ul class="space-y-2 mb-3">
+          <div class=" grid grid-cols-1 md:grid-cols-2 gap-3 p-2 space-2">
+            
             ${q.options.map((opt, i) => {
               const optLetter = String.fromCharCode(65 + i);
               const isCorrect = optLetter === q.answer;
-              return `<li class="px-3 py-2 rounded-lg border  text-white bg-gray-700/50 print:bg-white print:text-black  ${isCorrect ? 'border-gray-500  border-4' : 'border-gray-700 '}">
+              return `<div class="px-3 py-2 rounded-lg border text-white bg-gray-700/50 print:bg-white print:text-black  ${isCorrect ? 'border-gray-500  border-4' : 'border-gray-700 '}">
 
                         <b>${optLetter}.</b> ${opt}
-                      </li>`;
+                      </div>`;
             }).join('')}
-          </ul>
-          <div class="mt-2 text-sm text-gray-300 print:text-black">
-            <b class="text-sky-400 font-bold text-lg print-answer">Answer: ${q.answer || '<span class="text-red-500">No Answer provided</span>'}</b>
           </div>
-          <div class="mt-2 text-sm text-gray-300 print-hint">
-            <b class="text-sky-400 print:text-black">Hint:</b> ${q.hint || '<span class="text-gray-500 print:text-gray-500">No hint provided</span>'}
+          <div class="mt-2 text-sm text-sky-300 print:text-black grid grid-cols-1 md:grid-cols-2 gap-3 p-2 space-2 ">
+            <div class="font-bold text-lg print-answer">Answer: ${q.answer || '<span class="text-red-500">No Answer provided</span>'}</div>
+            <div >Hint: ${q.hint || '<span class="text-gray-500 print:text-gray-500">No hint provided</span>'} </div>
           </div>
+   
         `;
 
         card.innerHTML = questionHTML;
